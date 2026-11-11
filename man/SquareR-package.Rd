@@ -10,6 +10,14 @@ Put any number into the function and it will return both the square and square r
 This package was created for learning purposes and not intended
 to be used seriously. The creator will take no responsibility for bugs.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/Liam-Bendzsa/SquareR}
+  \item Report bugs at \url{https://github.com/Liam-Bendzsa/SquareR/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Liam Bendzsa \email{bendzsal@mcmaster.ca}
 
