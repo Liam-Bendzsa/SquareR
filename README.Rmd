@@ -1,0 +1,38 @@
+---
+output: github_document
+---
+
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# SquareR
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of SquareR is to provide a simple and lightweight way to easily calculate the square and squareroot of any number.
+
+## Installation
+
+You can install the development version of SquareR like so:
+
+``` r
+# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+```
+
+## Example
+
+The basics of how SquareR works:
+
+```{r example}
+library(SquareR)
+
+squarer(16)
+```
