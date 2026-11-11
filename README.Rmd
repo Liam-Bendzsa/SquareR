@@ -23,14 +23,16 @@ The goal of SquareR is to provide a simple and lightweight way to easily calcula
 
 You can install the development version of SquareR like so:
 
-``` r{install}
+
+```{r, install, eval=FALSE}
 if(!require(remotes)){
     install.packages("remotes")
     library(remotes)
-}
-remotes::install_github("Liam-Bendzsa/SquareR", 
-                         build_vignettes = TRUE)
+  }
+remotes::install_github("Liam-Bendzsa/SquareR", build_vignettes = TRUE)
 ```
+
+
 
 ## Example
 
