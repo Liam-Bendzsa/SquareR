@@ -12,9 +12,7 @@ calculate the square and squareroot of any number.
 
 You can install the development version of SquareR like so:
 
-``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
-```
+`r{install} if(!require(remotes)){     install.packages("remotes")     library(remotes) } remotes::install_github("Liam-Bendzsa/SquareR",                           build_vignettes = TRUE)`
 
 ## Example
 
