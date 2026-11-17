@@ -31,7 +31,7 @@ data$Month <- paste0(data$Month, "-01")
 data$Month <- as.Date(data$Month)
 ```
 
-```{r}
+```{r, fig.align='center'}
 theme <- colorRampPalette(c("lightblue", "firebrick2"))
 
 plot(data$Month, data$`Temperature anomaly`, 
