@@ -84,6 +84,11 @@
     
     
 <div class="section level2">
+<h2 id="data-source">Data Source:<a class="anchor" aria-label="anchor" href="#data-source"></a>
+</h2>
+<p>The full El-Nino/La-Nina data can be found <a href="https://ourworldindata.org/global-temperatures-el-nino-la-nina" class="external-link">here</a>.</p>
+</div>
+<div class="section level2">
 <h2 id="using-the-data-package">Using the Data Package<a class="anchor" aria-label="anchor" href="#using-the-data-package"></a>
 </h2>
 <p>The first thing to do is to load the library.</p>
@@ -97,8 +102,13 @@ assign the data to a data frame.</p>
 so, adding a day value to “Months,” and changing the vector to be a
 date:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">data</span><span class="op">$</span><span class="va">Month</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="va">data</span><span class="op">$</span><span class="va">Month</span>, <span class="st">"-01"</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="co">#This is needed to be recognized as a date.</span></span>
+<span><span class="va">data</span><span class="op">$</span><span class="va">Month</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="va">data</span><span class="op">$</span><span class="va">Month</span>, <span class="st">"-01"</span><span class="op">)</span> </span>
 <span><span class="va">data</span><span class="op">$</span><span class="va">Month</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/as.Date.html" class="external-link">as.Date</a></span><span class="op">(</span><span class="va">data</span><span class="op">$</span><span class="va">Month</span><span class="op">)</span></span></code></pre></div>
+<p>Note that ‘theme’ creates colours in-between the chosen values (here
+light blue and firebrick), then calling it using a number tells the
+function hw many colours to use (it will repeat when reaching the end of
+the colours).</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">theme</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/grDevices/colorRamp.html" class="external-link">colorRampPalette</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"lightblue"</span>, <span class="st">"firebrick2"</span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
@@ -106,9 +116,9 @@ date:</p>
 <span>  xlab <span class="op">=</span> <span class="st">"Year"</span>, </span>
 <span>  ylab <span class="op">=</span> <span class="st">"Temperature Anomaly"</span>, </span>
 <span>  main <span class="op">=</span> <span class="st">"Global El-Nino/La-Nina Effect\n Versus the 1990-2020 Average Temperature"</span>,</span>
-<span>  pch <span class="op">=</span> <span class="fl">21</span>,</span>
-<span>  cex <span class="op">=</span> <span class="fl">0.75</span>,</span>
-<span>  bg <span class="op">=</span> <span class="fu">theme</span><span class="op">(</span><span class="fl">920</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<span>  pch <span class="op">=</span> <span class="fl">21</span>, <span class="co">#symbol shape</span></span>
+<span>  cex <span class="op">=</span> <span class="fl">0.75</span>, <span class="co">#symbol size</span></span>
+<span>  bg <span class="op">=</span> <span class="fu">theme</span><span class="op">(</span><span class="fl">920</span><span class="op">)</span><span class="op">)</span> <span class="co">#background colour. "col =" returns outline colour.</span></span></code></pre></div>
 <p><img src="start_files/figure-html/unnamed-chunk-4-1.png" class="r-plt" alt="" width="700" style="display: block; margin: auto;"></p>
 </div>
   </div>
