@@ -13,6 +13,8 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 ```
+## Data Source:
+The full El-Nino/La-Nina data can be found [here](https://ourworldindata.org/global-temperatures-el-nino-la-nina).
 
 ## Using the Data Package
 
@@ -27,10 +29,11 @@ data <- as.data.frame(SquareR::el_nino)
 ```
 Next, we can simply plot the data with R's default functions, like so, adding a day value to "Months," and changing the vector to be a date:
 ```{r}
-data$Month <- paste0(data$Month, "-01")
+#This is needed to be recognized as a date.
+data$Month <- paste0(data$Month, "-01") 
 data$Month <- as.Date(data$Month)
 ```
-
+Note that 'theme' creates colours in-between the chosen values (here light blue and firebrick), then calling it using a number tells the function hw many colours to use (it will repeat when reaching the end of the colours).
 ```{r, fig.align='center'}
 theme <- colorRampPalette(c("lightblue", "firebrick2"))
 
@@ -38,8 +41,8 @@ plot(data$Month, data$`Temperature anomaly`,
   xlab = "Year", 
   ylab = "Temperature Anomaly", 
   main = "Global El-Nino/La-Nina Effect\n Versus the 1990-2020 Average Temperature",
-  pch = 21,
-  cex = 0.75,
-  bg = theme(920))
+  pch = 21, #symbol shape
+  cex = 0.75, #symbol size
+  bg = theme(920)) #background colour. "col =" returns outline colour.
 ```
 
